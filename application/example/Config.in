@@ -17,6 +17,12 @@ if AOS_APP_HELLOWORLD_DEMO
         default "helloworld_demo"
 endif
 
+source "application/example/BLE_demo/Config.in"
+if AOS_APP_BLE_DEMO
+    config AOS_BUILD_APP
+        default "BLE_demo"
+endif
+
 source "application/example/hal_demo/Config.in"
 if AOS_APP_HAL_DEMO
     config AOS_BUILD_APP
@@ -45,6 +51,12 @@ source "application/example/flower_demo/Config.in"
 if AOS_APP_FLOWER_DEMO
     config AOS_BUILD_APP
         default "flower_demo"
+endif
+
+source "application/example/rfid_demo/Config.in"
+if AOS_APP_RFID_DEMO
+    config AOS_BUILD_APP
+        default "rfid_demo"
 endif
 
 source "application/example/auto_demo/Config.in"
