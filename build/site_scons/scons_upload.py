@@ -37,7 +37,6 @@ def _communicate_with_host_pc(req, timeout):
     for i in range(5):
         if os.path.exists("/docker_share/.docker_burn_request"):
             time.sleep(0.1)
-            print("waiting for process sync")
     with open("/docker_share/.docker_burn_request", "w+") as f:
         f.write(req)
     while True:
